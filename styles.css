@@ -1,0 +1,371 @@
+:root{
+  --bg:#05070b;
+  --bg-soft:rgba(5,7,11,0.45);
+  --card:rgba(15,23,42,0.78);
+  --card-strong:rgba(15,23,42,0.92);
+  --border:#1f2937;
+  --blue:#2563eb;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{scroll-behavior:smooth;}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--text);
+
+  /* Фон на весь сайт */
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5,7,11,0.65) 0%,
+      rgba(5,7,11,0.35) 25%,
+      rgba(5,7,11,0.25) 55%,
+      rgba(5,7,11,0.60) 100%
+    ),
+    url("hero2.png") center top / cover no-repeat;
+}
+
+
+
+/* ================== CONTAINER ================== */
+.wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 16px;
+}
+
+
+
+/* ================== HEADER ================== */
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,7,11,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #111827;
+}
+
+.head-row{
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  color:#fff;
+}
+
+.logo{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.brand-title{
+  font-size:18px;
+  font-weight:700;
+}
+
+.main-nav{
+  display:flex;
+  gap:18px;
+}
+
+.main-nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+}
+
+
+
+/* ================== BURGER ================== */
+.burger{
+  display:none;
+  flex-direction:column;
+  width:28px;
+  height:20px;
+  justify-content:space-between;
+  border:0;
+  background:none;
+}
+
+.burger span{
+  display:block;
+  height:3px;
+  background:#fff;
+  border-radius:999px;
+}
+
+
+
+/* ================== HERO ================== */
+.hero{
+  padding-top:130px;
+  padding-bottom:80px;
+  min-height:110vh;
+}
+
+.hero-content{
+  max-width:650px;
+}
+
+.hero-content h1{
+  font-size:46px;
+  margin-bottom:20px;
+  text-shadow:0 0 28px rgba(0,0,0,.9);
+}
+
+.hero-content p{
+  margin-bottom:10px;
+  color:var(--muted);
+}
+
+.lead{
+  color:#e5e7eb;
+  font-size:18px;
+}
+
+
+
+/* ================== HERO INFO BLOCKS ================== */
+.hero-info{
+  margin-top:32px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.hero-info-block{
+  background:var(--card-strong);
+  padding:16px 18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(6px);
+  max-width:250px;
+}
+
+.hero-info-block h3{
+  margin-bottom:6px;
+  font-size:17px;
+}
+
+.hero-info-block p{
+  color:#d1d5db;
+  font-size:14px;
+}
+
+
+
+/* ================== BUTTON ================== */
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  margin-top:14px;
+  border-radius:999px;
+  background:var(--blue);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+}
+
+
+
+/* ================== SECTIONS ================== */
+.section{
+  padding:60px 0;
+  background:rgba(0,0,0,0.25);
+  backdrop-filter:blur(3px);
+}
+
+h2{
+  font-size:24px;
+  margin-bottom:16px;
+}
+
+
+
+/* ================== SERVICE ================== */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:22px;
+}
+
+.service-card{
+  background:var(--card);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:18px;
+}
+
+.service-card h3{
+  margin-bottom:10px;
+}
+
+.service-card p{
+  margin-bottom:8px;
+  color:var(--muted);
+}
+
+.service-card ul{
+  padding-left:20px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+
+/* ================== SERVICES TILES ================== */
+.tile-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+
+.tile{
+  background:var(--card);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:16px;
+}
+
+.tile h3{
+  margin-bottom:6px;
+}
+
+.tile p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+
+/* ================== FEEDBACK ================== */
+.feedback-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+}
+
+.fb-form{
+  flex:2;
+  min-width:260px;
+  background:var(--card);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:18px;
+}
+
+.fb-info{
+  flex:1;
+  min-width:240px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+#contact-form input,
+#contact-form textarea{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  background:rgba(15,23,42,0.9);
+  border-radius:10px;
+  border:1px solid var(--border);
+  color:#e5e7eb;
+}
+
+#contact-form textarea{min-height:110px;}
+
+.form-status{
+  margin-top:6px;
+  font-size:13px;
+  color:#22c55e;
+}
+
+
+
+/* ================== CONTACTS ================== */
+.contacts-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.socials{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.socials a{
+  padding:6px 10px;
+  background:rgba(15,23,42,0.92);
+  border-radius:999px;
+  font-size:14px;
+  color:#e5e7eb;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+
+
+/* ================== FOOTER ================== */
+.footer{
+  background:rgba(5,7,11,0.85);
+  border-top:1px solid #111827;
+  padding:16px 0;
+}
+
+.footer-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  font-size:13px;
+  color:#9ca3af;
+}
+
+
+
+/* ================== ADAPTIVE ================== */
+@media(max-width:768px){
+  .burger{display:flex;}
+
+  .main-nav{
+    position:absolute;
+    left:0;
+    right:0;
+    top:70px;
+    display:none;
+    flex-direction:column;
+    gap:12px;
+    padding:12px 16px;
+    background:rgba(5,7,11,0.95);
+    backdrop-filter:blur(10px);
+  }
+
+  .main-nav.open{display:flex;}
+
+  .hero{padding-top:100px;}
+
+  .hero-content h1{font-size:36px;}
+
+  .hero-info{flex-direction:column;}
+
+  .feedback-row{flex-direction:column;}
+  .fb-info{padding-top:12px;}
+
+  .footer-row{flex-direction:column;gap:6px;}
+}

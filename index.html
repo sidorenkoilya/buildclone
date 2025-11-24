@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>ТОВ «БудТехнікаКран»</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap head-row">
+
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="БудТехнікаКран" class="logo">
+      <span class="brand-title">БудТехнікаКран</span>
+    </a>
+
+    <button id="burger" class="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="#home">Головна</a>
+      <a href="#service">Сервіс</a>
+      <a href="#services">Послуги</a>
+      <a href="#feedback">Звʼязок</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="wrap hero-content">
+    <h1>ТОВ «БудТехнікаКран»</h1>
+
+    <p class="lead">
+      Українська компанія ТОВ «БудТехнікаКран» здійснює комплекс заходів з постачання,
+      монтажу, демонтажу, ремонту та технічного обслуговування баштових кранів.
+    </p>
+    <p>
+      Ми переконані, що якість — основа довгострокового співробітництва.
+    </p>
+    <p>
+      У розпорядженні компанії висококваліфікований персонал і сервісна служба.
+    </p>
+
+    <a href="#feedback" class="btn">Зв’язатися</a>
+
+    <div class="hero-info">
+      <div class="hero-info-block">
+        <h3>15+ років досвіду</h3>
+        <p>Монтаж, демонтаж і сервіс баштових кранів.</p>
+      </div>
+      <div class="hero-info-block">
+        <h3>1000+ об’єктів</h3>
+        <p>Будівництва по всій Україні.</p>
+      </div>
+      <div class="hero-info-block">
+        <h3>Супровід 24/7</h3>
+        <p>Сервісна підтримка на об'єктах.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service" class="section section-service">
+  <div class="wrap">
+    <h2>Сервіс</h2>
+
+    <div class="service-grid">
+      <article class="service-card">
+        <h3>Монтаж / демонтаж кранів</h3>
+        <p>
+          Комплекс робіт з монтажу та демонтажу баштових кранів.
+        </p>
+        <ul>
+          <li>виїзд фахівців;</li>
+          <li>встановлення порталу;</li>
+          <li>підйом крана на висоту;</li>
+          <li>встановлення фундаменту;</li>
+          <li>виготовлення кріплень;</li>
+          <li>логістика доставки;</li>
+          <li>повний технічний супровід.</li>
+        </ul>
+      </article>
+
+      <article class="service-card">
+        <h3>Технічне обслуговування</h3>
+        <p>
+          Регламентне ТО кранів для безпечної роботи.
+        </p>
+        <ul>
+          <li>діагностика вузлів;</li>
+          <li>перевірка редукторів;</li>
+          <li>оцінка металоконструкцій;</li>
+          <li>перевірка електрики;</li>
+          <li>випробування;</li>
+          <li>рекомендації експлуатації.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section section-services">
+  <div class="wrap">
+    <h2>Послуги</h2>
+
+    <div class="tile-grid">
+      <article class="tile">
+        <h3>Проект фундаменту</h3>
+        <p>Фундаментні плити з анкерними групами.</p>
+      </article>
+
+      <article class="tile">
+        <h3>Розробка ПВР</h3>
+        <p>Документація для монтажу та демонтажу кранів.</p>
+      </article>
+
+      <article class="tile">
+        <h3>Проект кріплення</h3>
+        <p>Системи кріплення крана до будівлі.</p>
+      </article>
+
+      <article class="tile">
+        <h3>Виготовлення кріплень</h3>
+        <p>Сертифіковані металоконструкції.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="feedback" class="section section-feedback">
+  <div class="wrap feedback-row">
+
+    <div class="fb-form">
+      <h2>Зворотній зв’язок</h2>
+      <p>Залиште заявку — інженер зв’яжеться з вами.</p>
+
+      <form id="contact-form" action="send.php" method="POST">
+        <input type="text" name="name" placeholder="Ім’я" required>
+        <input type="text" name="contacts" placeholder="Телефон або e-mail" required>
+        <textarea name="message" placeholder="Опис об’єкта або питання"></textarea>
+        <button type="submit" class="btn">Надіслати</button>
+      </form>
+
+      <div id="form-status" class="form-status"></div>
+    </div>
+
+    <aside class="fb-info">
+      <h3>Про компанію</h3>
+      <p>
+        Супровід на всіх етапах: вибір крана,
+        монтаж, експлуатація, сервіс.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<section id="contacts" class="section section-contacts">
+  <div class="wrap contacts-row">
+    <div class="contacts-col">
+      <h2>Контакти</h2>
+      <p><strong>ТОВ «БудТехнікаКран»</strong></p>
+      <p>01013, м. Київ, вул. Будіндустрії, 5, офіс 313</p>
+      <p>Телефон: <a href="tel:+380964150145">+38 (096) 415-01-45</a></p>
+      <p>E-mail: <a href="mailto:btc.office.group@gmail.com">btc.office.group@gmail.com</a></p>
+    </div>
+
+    <div class="contacts-col socials">
+      <h3>Ми в мережі</h3>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+      <a href="https://t.me" target="_blank">Telegram</a>
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© ТОВ «БудТехнікаКран»</span>
+    <span>Монтаж та сервіс баштових кранів</span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
