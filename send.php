@@ -1,30 +1,22 @@
 <?php
-// получаем данные формы
-$name = $_POST['name'] ?? '';
-$contacts = $_POST['contacts'] ?? '';
-$message = $_POST['message'] ?? '';
+$name = isset($_POST['name']) ? trim($_POST['name']) : '';
+$contacts = isset($_POST['contacts']) ? trim($_POST['contacts']) : '';
+$message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
-// куда отправлять
 $to = "btc.office.group@gmail.com";
 $subject = "Нова заявка з сайту БудТехнікаКран";
 
-// текст письма
-$body = "
-Нова заявка з сайту:
+$body = "Нова заявка з сайту:\n\n";
+$body .= "Ім’я: {$name}\n";
+$body .= "Контакти: {$contacts}\n";
+$body .= "Повідомлення:\n{$message}\n";
 
-Ім’я: $name
-Контакти: $contacts
-Повідомлення:
-$message
-";
+$headers = "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "From: no-reply@site.local\r\n";
 
-$headers = "From: no-reply@site.com\r\n";
-$headers .= "Reply-To: $contacts\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-if(mail($to, $subject, $body, $headers)){
-    echo "OK";
+if (mail($to, $subject, $body, $headers)) {
+  echo "OK";
 } else {
-    echo "ERROR";
+  echo "ERROR";
 }
 ?>
