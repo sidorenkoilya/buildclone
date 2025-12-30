@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Заявка — БудТехнікаКран</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Заявка на монтаж, демонтаж, сервіс та інженерний супровід баштових кранів по всій Україні." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap head-row">
+    <a href="index.html" class="brand" aria-label="БудТехнікаКран — головна">
+      <img src="Logo2.png" alt="Лого БудТехнікаКран" class="logo">
+    </a>
+
+    <button id="burger" class="burger" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Головна навігація">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="service.html" class="nav-link">Сервіс</a>
+      <a href="poslugy.html" class="nav-link">Послуги</a>
+      <a href="projects.html" class="nav-link">Проєкти</a>
+      <a href="about.html" class="nav-link">Про компанію</a>
+      <a href="contacts.html" class="nav-link">Контакти</a>
+    </nav>
+
+    <a class="header-call" href="tel:+380964150145" aria-label="Подзвонити: 096 415 01 45">
+      <span class="header-call-ico" aria-hidden="true"></span>
+      Подзвонити
+    </a>
+  </div>
+</header>
+
+<section class="section feedback">
+  <div class="wrap feedback-row">
+
+    <div class="fb-form glass glass--strong hover-up">
+      <h1 style="margin-bottom:6px;">Заявка на роботи</h1>
+      <p class="muted" style="margin-bottom:12px;">
+        Опишіть задачу максимально детально — це дозволить швидше підготувати технічне рішення
+        та зорієнтувати вас по строках і формату виконання робіт.
+      </p>
+
+      <form id="contact-form" action="send.php" method="POST">
+        <label class="field">
+          <span>Ім’я</span>
+          <input type="text" name="name" placeholder="Ваше ім’я" required>
+        </label>
+
+        <label class="field">
+          <span>Телефон або e-mail</span>
+          <input type="text" name="contacts" placeholder="Наприклад: 096 415 01 45" required>
+        </label>
+
+        <label class="field">
+          <span>Повідомлення</span>
+          <textarea name="message" placeholder="Місто, тип робіт, модель крана, висота, строки, умови майданчика"></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-wide">Надіслати заявку</button>
+      </form>
+
+      <div id="form-status" class="form-status"></div>
+
+      <p class="muted" style="margin-top:10px;font-size:13px;">
+        Після відправки заявка надсилається на пошту та дублюється у WhatsApp черговому номеру
+        для оперативного реагування.
+      </p>
+    </div>
+
+    <aside class="fb-info glass glass--light hover-up">
+      <h3>Що вказати в заявці</h3>
+      <div class="mini-list">
+        <div class="mini-item">📍 Місто та орієнтир об’єкта</div>
+        <div class="mini-item">🏗 Тип робіт: монтаж / демонтаж / сервіс / кріплення</div>
+        <div class="mini-item">🧱 Модель баштового крана (якщо відома)</div>
+        <div class="mini-item">📏 Планована висота або етап будівництва</div>
+        <div class="mini-item">🕒 Бажані строки виконання</div>
+        <div class="mini-item">⚠️ Обмеження: під’їзд, простір, графік</div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <a class="btn btn-ghost" href="tel:+380964150145">Зателефонувати зараз</a>
+      </div>
+
+      <p class="muted" style="margin-top:10px;font-size:13px;">
+        Для термінових питань краще телефонувати напряму.
+      </p>
+    </aside>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-row">
+    <span>© ТОВ «БудТехнікаКран»</span>
+    <span class="muted">
+      <a href="tel:+380964150145">+38 (096) 415-01-45</a> •
+      <a href="tel:+380934073218">+38 (093) 407-32-18</a> •
+      Telegram: <a href="https://t.me/BuildTechCrane" target="_blank" rel="noopener">@BuildTechCrane</a> •
+      TikTok: <a href="https://www.tiktok.com/@buildtechcrane?_r=1&_t=ZM-92ZZQgkCEpv" target="_blank" rel="noopener">BuildTechCrane</a>
+    </span>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
